@@ -1,0 +1,107 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;  
+}
+
+#container {
+    height:100vh;
+    width: 100vw;
+    background-color: aqua;
+    display: flex;
+}
+#container .split{
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#container #playstation{
+   background-image: url("./ps.jpg");
+   position: relative;
+
+}
+#container #xboxseries{
+    background-image: url("./xbox.jpg");
+    position: relative;
+}
+#container #playstation::before{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(13, 78, 218, 0.5);
+    content:"";
+}
+#container #xboxseries::before{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    content:"";
+}
+#container .split h1{
+    color:white;
+    font-size: 50px;
+    letter-spacing: 2px;
+    text-align: center;    
+    position: relative;
+  top:4em;
+
+}
+#container .split  a{
+    text-decoration: none;
+    color: white;
+    height: 70px;
+    width: 180px;
+    display: block;
+    border: 4px solid white;
+    
+    padding: 20px 0px 10px 50px;
+    font-weight: bold;
+    position: relative;
+    top:15em;
+    left:18em;
+    
+}
+#container #playstation a:hover{
+    background-color: blue;
+    border: 1px solid transparent;
+    
+    
+}
+#container #xboxseries a:hover{
+    background-color: green;
+    border: 1px solid transparent;
+    
+}
+.moving{
+    animation: movingTheBox 2s 1s 1 alternate forwards;
+}
+@keyframes movingTheBox {
+    
+   100%{
+       width:220%;
+   }
+}
+.heading{
+    animation: movingTheHeading 2s 1s 1 alternate forwards;
+}
+@keyframes movingTheHeading {
+    0%{
+        transform: translate(10px,-20px);
+    }
+    100%{
+        transform: translate(100px,-40px);
+    }
+}
+.anchoring{
+    animation: movingTheanchoring 2s 1s 1 alternate forwards;
+}
+@keyframes movingTheanchoring {
+    0%{
+        transform: translate(10px,-20px);
+    }
+    100%{
+        transform: translate(220px,-40px);
+    }
+}
