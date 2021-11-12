@@ -91,7 +91,7 @@
         transform: translate(10px,-20px);
     }
     100%{
-        transform: translate(100px,-40px);
+        transform: translate(100px,-60px);
     }
 }
 .anchoring{
@@ -102,6 +102,53 @@
         transform: translate(10px,-20px);
     }
     100%{
-        transform: translate(220px,-40px);
+        transform: translate(220px,-60px);
+    }
+}
+
+.right_box_link{
+    transform:translate(-130px,-10px);
+}
+
+.moving-left {
+    animation: movingTheRightBox 2s 1s 1 alternate forwards;
+}
+
+@keyframes movingTheRightBox {
+   100%{
+
+    width: 220%;
+   }
+}
+.moving-left-heading{
+    animation: movingTheRightHeading 2s 1s 1 alternate forwards;
+}
+@keyframes movingTheRightHeading {
+   
+    100%{
+        transform: translate(-250px,-60px);
+    }
+
+}
+
+.moving-left-anchoring{
+    animation: movingTheRightanchoring 2s 1s 1 alternate forwards;
+}
+@keyframes movingTheRightanchoring {
+    
+    100%{
+        transform: translate(-100px,-60px);
+    }
+}
+
+.width-left{
+    width:30%;
+}
+.moving-left-box-anchoring {
+    animation: movingLeftAnchoring 2s 1s 1 alternate forwards;
+}
+@keyframes movingLeftAnchoring {
+    100%{
+        transform: translate(-150px,0px);
     }
 }
